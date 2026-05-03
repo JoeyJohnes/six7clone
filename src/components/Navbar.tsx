@@ -3,10 +3,11 @@ import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
+// Card centers: screen 1=About, 2=Awards(How), 3=Services — multiply by innerHeight
 const links = [
-  { label: 'Услуги',       href: '#services' },
-  { label: 'Автоматизация', href: '#how' },
-  { label: 'О нас',        href: '#about' },
+  { label: 'Услуги',        screen: 15 },
+  { label: 'Автоматизация', screen: 10 },
+  { label: 'О нас',         screen: 5  },
 ];
 
 export function Navbar() {
@@ -35,13 +36,13 @@ export function Navbar() {
         <ul className="hidden md:flex items-center gap-8">
           {links.map((l) => (
             <li key={l.label}>
-              <Link
-                href={l.href}
-                className="text-[13px] font-medium uppercase tracking-widest text-[rgba(240,242,245,0.8)] hover:text-white transition-colors duration-200"
+              <button
+                onClick={() => window.scrollTo({ top: l.screen * window.innerHeight, behavior: 'smooth' })}
+                className="text-[13px] font-medium uppercase tracking-widest text-[rgba(240,242,245,0.8)] hover:text-white transition-colors duration-200 bg-transparent border-none cursor-pointer"
                 style={{ fontFamily: 'var(--font-roboto-mono)' }}
               >
                 {l.label}
-              </Link>
+              </button>
             </li>
           ))}
         </ul>
