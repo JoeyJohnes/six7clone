@@ -571,7 +571,7 @@ function CTACard() {
         {/* Try to load logo; falls back to text */}
         <Image
           src="/images/six7-logo.png"
-          alt="AIS"
+          alt="Six7"
           width={72}
           height={72}
           style={{ borderRadius: '50%', objectFit: 'cover' }}
@@ -622,7 +622,7 @@ function CTACard() {
           ✈ Написать в Telegram →
         </Link>
         <Link
-          href="https://t.me/six7cc"
+          href="https://t.me/+CUuzE04xtpU2ZGY0"
           target="_blank"
           rel="noopener"
           className="transition-all hover:bg-white/10 text-center"
