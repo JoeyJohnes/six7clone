@@ -572,9 +572,9 @@ function CTACard() {
         <Image
           src="/images/six7-logo.png"
           alt="Six7"
-          width={72}
-          height={72}
-          style={{ borderRadius: '50%', objectFit: 'cover' }}
+          width={58}
+          height={24}
+          style={{ objectFit: 'contain' }}
           onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }}
         />
       </div>
