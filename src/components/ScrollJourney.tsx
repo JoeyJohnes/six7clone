@@ -136,7 +136,7 @@ function HeroCard() {
   return (
     <div
       ref={cardRef}
-      className="w-full max-w-4xl mx-auto rounded-3xl flex flex-col items-center text-center px-10 md:px-20 py-14"
+      className="w-full max-w-4xl mx-auto rounded-3xl flex flex-col items-center text-center px-5 md:px-20 py-8 md:py-14"
       style={{
         background: 'rgba(12,15,24,0.6)',
         backdropFilter: 'blur(20px)',
@@ -193,7 +193,7 @@ function HeroCard() {
 
       {/* Stats bar */}
       <div
-        className="w-full max-w-lg mx-auto rounded-2xl grid grid-cols-3"
+        className="w-full max-w-lg mx-auto rounded-2xl grid grid-cols-3 text-center"
         style={{
           background: 'rgba(12,15,24,0.5)',
           border: '1px solid rgba(255,255,255,0.08)',
@@ -229,7 +229,7 @@ function HeroCard() {
 function AboutCard() {
   return (
     <div
-      className="w-full max-w-4xl mx-auto rounded-3xl px-12 py-12"
+      className="w-full max-w-4xl mx-auto rounded-3xl px-5 md:px-12 py-8 md:py-12"
       style={{
         background: 'rgba(12,15,24,0.6)',
         backdropFilter: 'blur(20px)',
@@ -304,7 +304,7 @@ function AboutCard() {
 function AwardsCard() {
   return (
     <div
-      className="w-full max-w-4xl mx-auto rounded-3xl px-12 py-12"
+      className="w-full max-w-4xl mx-auto rounded-3xl px-5 md:px-12 py-8 md:py-12"
       style={{
         background: 'rgba(12,15,24,0.6)',
         backdropFilter: 'blur(20px)',
@@ -385,7 +385,7 @@ function AwardsCard() {
 function ServicesCard() {
   return (
     <div
-      className="w-full max-w-4xl mx-auto rounded-3xl px-10 py-8"
+      className="w-full max-w-4xl mx-auto rounded-3xl px-5 md:px-10 py-6 md:py-8"
       style={{
         background: 'rgba(12,15,24,0.6)',
         backdropFilter: 'blur(20px)',
@@ -411,7 +411,7 @@ function ServicesCard() {
         <span style={{ color: '#2ca9e1' }}>под вашу задачу</span>
       </h2>
 
-      <div className="grid grid-cols-2 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         {SERVICES.map((s) => (
           <div
             key={s.title}
@@ -454,7 +454,7 @@ function ServicesCard() {
 function CaseCard() {
   return (
     <div
-      className="w-full max-w-4xl mx-auto rounded-3xl px-12 py-12"
+      className="w-full max-w-4xl mx-auto rounded-3xl px-5 md:px-12 py-8 md:py-12"
       style={{
         background: 'rgba(12,15,24,0.6)',
         backdropFilter: 'blur(20px)',
@@ -551,7 +551,7 @@ function CaseCard() {
 function CTACard() {
   return (
     <div
-      className="w-full max-w-xl mx-auto flex flex-col items-center text-center gap-6 py-14 px-10"
+      className="w-full max-w-xl mx-auto flex flex-col items-center text-center gap-5 py-8 md:py-14 px-5 md:px-10"
       style={{
         background: 'rgba(12,15,24,0.65)',
         backdropFilter: 'blur(20px)',
