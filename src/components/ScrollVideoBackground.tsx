@@ -44,7 +44,17 @@ export function ScrollVideoBackground() {
         }
       }
       if (!img) return;
-      ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+      // object-fit: cover — кроп по центру, без искажений
+      const iw = img.naturalWidth || (img as HTMLImageElement).width;
+      const ih = img.naturalHeight || (img as HTMLImageElement).height;
+      const cw = canvas.width;
+      const ch = canvas.height;
+      const scale = Math.max(cw / iw, ch / ih);
+      const sw = cw / scale;
+      const sh = ch / scale;
+      const sx = (iw - sw) / 2;
+      const sy = (ih - sh) / 2;
+      ctx.drawImage(img, sx, sy, sw, sh, 0, 0, cw, ch);
     }
 
     // ── maxScroll: use only the known driver height ────────────────────
