@@ -15,8 +15,23 @@ const robotoMono = Roboto_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "AI Automation Society — Master AI Automation",
-  description: "Join 330,000+ innovators mastering n8n, Claude Code, and cutting-edge AI tools to build real businesses with AI.",
+  title: "Six7 — Автоматизация бизнеса",
+  description: "Делаю так, чтобы ваш бизнес работал без вас. Автоматизирую всё: от записи до оплаты. Запуск за 3 дня.",
+  openGraph: {
+    title: "Six7 — Автоматизация бизнеса",
+    description: "ИИ работает, пока вы отдыхаете. Напишите — запустим автоматизацию за 3 дня.",
+    url: "https://six7cc.vercel.app",
+    siteName: "Six7",
+    images: [{ url: "/og-image.jpg", width: 1920, height: 1080 }],
+    locale: "ru_RU",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Six7 — Автоматизация бизнеса",
+    description: "ИИ работает, пока вы отдыхаете. Напишите — запустим автоматизацию за 3 дня.",
+    images: ["/og-image.jpg"],
+  },
 };
 
 export default function RootLayout({
@@ -26,7 +41,7 @@ export default function RootLayout({
 }>) {
   return (
     <html
-      lang="en"
+      lang="ru"
       className={`${montserrat.variable} ${robotoMono.variable} antialiased dark`}
     >
       <body className="bg-[#060810] text-[#f0f2f5]">{children}</body>
